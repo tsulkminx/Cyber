@@ -9,7 +9,7 @@
 ;增强中国IP段：不支持
 ;增强国外GFW：不支持
 
-ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=国内直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 ruleset=全球拦截,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 ruleset=应用净化,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
 ruleset=谷歌服务,https://raw.githubusercontent.com/tsulkminx/Cyber/main/Google
@@ -19,23 +19,23 @@ ruleset=苹果服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Cl
 ruleset=国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 ruleset=电报信息,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 ruleset=节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
-ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-ruleset=全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-ruleset=全球直连,[]GEOIP,CN
+ruleset=国内直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=国内直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=国内直连,[]GEOIP,CN
 ruleset=漏网之鱼,[]FINAL
 
-custom_proxy_group=节点选择`select`[]自动选择`[]全球直连`.*
+custom_proxy_group=节点选择`select`[]自动选择`[]国内直连`.*
 custom_proxy_group=自动选择`url-test`.*`http://www.gstatic.com/generate_204`300
-custom_proxy_group=谷歌服务`select`[]节点选择`[]全球直连`.*
-custom_proxy_group=贝宝服务`select`[]节点选择`[]全球直连`.*
-custom_proxy_group=国外媒体`select`[]节点选择`[]自动选择`[]全球直连`.*
-custom_proxy_group=电报信息`select`[]节点选择`[]全球直连`.*
-custom_proxy_group=微软服务`select`[]全球直连`[]节点选择`.*
-custom_proxy_group=苹果服务`select`[]节点选择`[]全球直连`.*
-custom_proxy_group=全球直连`select`[]DIRECT
+custom_proxy_group=谷歌服务`select`[]节点选择`[]国内直连`.*
+custom_proxy_group=贝宝服务`select`[]节点选择`[]国内直连`.*
+custom_proxy_group=国外媒体`select`[]节点选择`[]自动选择`[]国内直连`.*
+custom_proxy_group=电报信息`select`[]节点选择`[]国内直连`.*
+custom_proxy_group=微软服务`select`[]国内直连`[]节点选择`.*
+custom_proxy_group=苹果服务`select`[]节点选择`[]国内直连`.*
+custom_proxy_group=国内直连`select`[]DIRECT
 custom_proxy_group=全球拦截`select`[]REJECT`[]DIRECT
-#custom_proxy_group=应用净化`select`[]REJECT`[]DIRECT
-custom_proxy_group=漏网之鱼`select`[]节点选择`[]全球直连`[]自动选择`.*
+custom_proxy_group=应用净化`select`[]REJECT`[]DIRECT
+custom_proxy_group=漏网之鱼`select`[]节点选择`[]国内直连`[]自动选择`.*
 
 enable_rule_generator=true
 overwrite_original_rules=true
